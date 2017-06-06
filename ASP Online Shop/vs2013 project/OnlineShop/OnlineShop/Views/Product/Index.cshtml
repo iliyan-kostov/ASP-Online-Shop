@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using OnlineShop.Models
+@model ProductViewModel
+
+<h2>Our Product Index</h2>
+<h3>Here you can see a list of our products:</h3>
+
+@if ((Model.Products != null) && (Model.Products.Count > 0))
+{
+    <table class="table-bordered">
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Unit Price
+            </th>
+        </tr>
+        @foreach (var product in Model.Products.OrderBy(p => p.ProductId))
+        {
+            <tr>
+                <td>
+                    <p><a href="~/Product/Details?productId=@product.ProductId"><img src="@product.ImageUrl" /></a></p>
+                </td>
+                <td>
+                    <p>@product.Name</p>
+                </td>
+                <td>
+                    <p>@product.UnitPrice</p>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>Sorry, we didn't find any products!</p>
+}

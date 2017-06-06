@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using OnlineShop.Models
+@model ProductDetailsViewModel
+
+<h2>Product Details</h2>
+<h3>Information about a specific product:</h3>
+
+@if (Model.Product != null)
+{
+    <table class="table-bordered">
+        <tr>
+            <th>
+                @Html.Label("Image", new { @class = "col-md-2 control-label" })
+            </th>
+            <th>
+                @Html.LabelFor(m => m.Product.Name, new { @class = "col-md-2 control-label" })
+            </th>
+            <th>
+                @Html.LabelFor(m => m.Product.UnitPrice, new { @class = "col-md-2 control-label" })
+            </th>
+            <th>
+                @Html.Label("Add To Cart", new { @class = "col-md-2 control-label" })
+            </th>
+        </tr>
+        @{Product product = Model.Product;
+              <tr>
+                  <td>
+                      <p><img src="@product.ImageUrl" /></p>
+                  </td>
+                  <td>
+                      @Html.ValueFor(m => m.Product.Name)
+                  </td>
+                  <td>
+                      @Html.ValueFor(m => m.Product.UnitPrice)
+                  </td>
+                  <td>
+                      @if (Request.IsAuthenticated)
+                      {
+                          using (Html.BeginForm("Add", "Cart", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                          {
+                              @Html.ValidationSummary()
+                              @Html.AntiForgeryToken()
+                              @Html.TextBoxFor(m => m.Amount, new { @class = "form-control" })
+                              <input type="hidden" name="ProductId" value="@Model.Product.ProductId" />
+                              <p><input type="submit" value="Add to cart" class="btn btn-default" /></p>
+                          }
+                      }
+                      else
+                      {
+                          <p>Login to add to cart!</p>
+                      }
+                  </td>
+              </tr>
+        }
+    </table>
+}
+else
+{
+    <p>Sorry, such product doesn't exist!</p>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

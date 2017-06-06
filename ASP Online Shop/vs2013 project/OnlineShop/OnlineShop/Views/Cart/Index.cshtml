@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using OnlineShop.Models
+@model CartViewModel
+
+<h2>Your Cart's Contents:</h2>
+
+@if (!(Request.IsAuthenticated))
+{
+    <p>You have to log in to see your cart's contents!</p>
+}
+else
+{
+    if ((Model.CartItemStructs == null) || (Model.CartItemStructs.Count == 0))
+    {
+        <p>You have no items in your cart!</p>
+    }
+    else
+    {
+        <table class="table-bordered">
+            <tr>
+                <th>
+                   Image
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Price (Up-To-Date)
+                </th>
+        </tr>
+        @foreach (var cartItemStruct in Model.CartItemStructs.OrderBy(c => c.CartItem.CartItemId))
+        {
+            <tr>
+                <td>
+                    <p><a href="~/Product/Details?productId=@cartItemStruct.ProductId"><img src="@cartItemStruct.ProductImageUrl" /></a></p>
+                </td>
+                <td>
+                    <p>@cartItemStruct.ProductName</p>
+                </td>
+                <td>
+                    <p>&nbsp;&nbsp;&nbsp;@cartItemStruct.CartItem.Amount</p>
+                </td>
+                <td>
+                    <p>&nbsp;&nbsp;&nbsp;@(cartItemStruct.CartItem.Amount * cartItemStruct.ProductUnitPrice)</p>
+                </td>
+            </tr>
+        }
+        <tr>
+            <th>
+            </th>
+            <th>
+            </th>
+            <th>
+                <p>TOTAL:</p>
+            </th>
+            <th>
+                <p>&nbsp;&nbsp;&nbsp;@Model.TotalPurchaseValue</p>
+            </th>
+        </tr>
+    </table>
+    
+
+    }
+    using (Html.BeginForm("Reset", "Cart", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Reset Cart" class="btn btn-default" />
+    }
+    using (Html.BeginForm("Index", "Purchase", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Purchase & Pay" class="btn btn-default" />
+    }
+}

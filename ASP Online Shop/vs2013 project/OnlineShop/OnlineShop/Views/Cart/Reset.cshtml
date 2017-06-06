@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Reset";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reset Your Cart</h2>
+
+@if (!(Request.IsAuthenticated))
+{
+    <p>You have to be logged in to do this!</p>
+}
+else
+{
+    <p>Your cart has been reset!</p>
+    <p>See <a href="~/Cart/Index">Your Cart's contents...</a></p>
+}

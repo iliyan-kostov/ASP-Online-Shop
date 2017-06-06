@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using OnlineShop.Models
+@model CartViewModel
+
+<h2>Adding Items To Your Cart...</h2>
+
+@if (!(Request.IsAuthenticated))
+{
+    <p>You have to be logged in to do this!</p>
+}
+else
+{
+    if (Model.AddingItemToCartIsSuccessful)
+    {
+        <p>Items added successfully!</p>
+    }
+    else
+    {
+        <p>Failed to add items!</p>
+    }
+    <p>See <a href="~/Cart/Index">Your Cart's contents...</a></p>
+}

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>495</y>
+      <w>198</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*ApplicationUser*
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>387</y>
+      <w>198</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>*Microsoft.AspNet.*
+*Identity.EntityFramework.*
+*IdentityUser*
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>441</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Id : string &lt;&lt;PK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>279</x>
+      <y>459</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>180</y>
+      <w>198</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lw=1
+*Product*
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>207</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+ProductId : int &lt;&lt;PK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>198</y>
+      <w>153</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;110.0;50.0;150.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>234</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Name : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>261</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+UnitPrice : double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>288</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+ImageUrl : string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>180</y>
+      <w>198</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lw=1
+*CartItem*
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>234</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+ProductId : int &lt;&lt;FK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>261</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+UserId : string &lt;&lt;FK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>288</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Amount : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>207</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+CartItemId : int &lt;&lt;PK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>261</y>
+      <w>153</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;200.0;50.0;200.0;110.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>351</y>
+      <w>198</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lw=1
+*Purchase*
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>405</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+ProductId : int &lt;&lt;FK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>432</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+UserId : string &lt;&lt;FK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>459</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Amount : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>378</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+PurchaseId : int &lt;&lt;PK&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>486</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Value : double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>513</x>
+      <y>513</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+DateTime : DateTime</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>432</y>
+      <w>153</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;30.0;110.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>216</y>
+      <w>153</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;110.0;220.0;150.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>207</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Продукт</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>234</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Име</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>261</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Цена</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>288</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Изображение</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>441</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Потребител</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>207</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Количка - запис</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>378</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Поръчка</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>261</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Потребител</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>288</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Количество</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>234</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Желан продукт</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>405</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Продукт</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>432</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Потребител</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>459</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Количество</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>486</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Обща цена</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>513</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lw=0
+halign=left
+Дата и час</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

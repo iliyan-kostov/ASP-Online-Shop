@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@if (!(Request.IsAuthenticated))
+{
+    <p>You have to log in to do purchase products!</p>
+}
+else
+{
+    <p>Purchase successful!</p>
+    <p>All items from your cart were purchased!</p>
+    <p>See <a href="~/Cart/Index">Your Cart's contents...</a></p>
+}
